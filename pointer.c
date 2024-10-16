@@ -10,9 +10,17 @@ int main()
     printf("sizeof(unsigned int *) : %lu\n", sizeof(unsigned int *));
 
 
-    printf("\n[연산자에 따른 출력 체크]\n");
+    printf("\n[실제 변수와 포인터 변수의 값]\n");
     int n = 10;
     int * n_pointer = &n;
+    // n : 10
+    // &n : n의 주소. 이 주소는 int * 타입이다.
+    // *n : 없음. 포인터 변수가 아니기 때문
+    // n_pointer : n의 주소
+    // &n_pointer : n_pointer의 주소. 이 주소는 int ** 타입이다.
+    // *n_pointer : n의 실제 값(인스턴스) == n
+
+    printf("\n[연산자에 따른 출력 체크]\n");
     printf("n : %d\n", n);
     printf("&n : %d\n", &n);
     printf("*n : 불가\n");
