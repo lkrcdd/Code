@@ -52,5 +52,6 @@
         "unordered_map": "cpp",
         "variant": "cpp",
         "vector": "cpp"
-    }
+    },
+    "github.copilot.chat.agent.runTasks": true
 }
