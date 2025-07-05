@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h> // for malloc
 
-// memory reallocate
+// memory reallocate, 배열 복사
 
 int main()
 {
@@ -15,6 +15,7 @@ int main()
 
     // input new size
     scanf("%d", &n);
+
     arr = realloc(arr, sizeof(int) * n);
     if (arr == NULL)
         return 1;

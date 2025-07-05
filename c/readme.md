@@ -1,25 +1,12 @@
 # C/CPP
 
-1. cpp compiler
-2. convention
-3. pointer
-
-
-
-
 * 소숫점 나누기 시 형변환
 * scanf시 파라미터로 받는게 주솟값이어서 배열은 그냥넣어도됨
 * class
 * keyword
 * VLA, malloc
 
-## 1. cpp compiler
-STL - map, vector, list, namespace
-C++11 - auto, nullptr / (14)
-C++17 - 
-C++20 - / (23)
-
-## 2. convention
+## C convention
 file name : 소문자, snake_case
 Indentation : 공백 4칸 사용, 탭 대신 공백 사용
 Braces : 중괄호 시 열 때는 같은 라인, 닫을 때는 새로운 라인
@@ -47,7 +34,7 @@ int function(int n) {
 오류 처리 : 오류 발생 시, 반환 값 체크 및 예외 처리
     if (ptr == NULL) { /* handle error */ }
 
-## 3. pointer
+## pointer
 1. 포인터 변수의 크기
 32bit system은 32bit(4byte), 64bit system은 64bit(8byte).
 -> 이 때문에 인식 가능한 메모리 용량이 달라지는 것(32bit에서는 최대 2^32Byte(약 4GB), 64bit에서는 최대 2^64Byte까지)

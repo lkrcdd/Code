@@ -3,25 +3,17 @@
 
 int main()
 {
-    int n, x, t;
-    int sz = 0;
-    int *arr = NULL;
+    int up, down, max;
+    scanf("%d %d %d", &up, &down, &max);
 
-    scanf("%d %d", &n, &x);
+    int distance = up - down;     // 하루에 올라갈 수 있는 거리
+    int temp = max - up;          // 한번에 올라갈 수 있는 위치 = 임계선이라 칭함
+    int uped = temp / distance;   // 올라간 날 수
+    int remain = temp % distance; // 임계선까지의 남은 미터
 
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &t);
-        if (t < x)
-        {
-            sz++;
-            arr = realloc(arr, sizeof(int) * sz);
-            arr[sz - 1] = t;
-        }
-    }
-
-    for (int i = 0; i < sz; i++)
-    {
-        printf("%d ", arr[i]);
-    }
+    int sum = uped;  // 이미 올라온 날수(현재 위치 <= 임계선)
+    if (remain != 0) // 임계선까지의 거리가 조금 남아있다면 하루를 더 씀
+        sum++;
+    sum++; // 10번 줄 코드에 의해 짜여진 로직이므로 하루 추가
+    printf("%d", sum);
 }
